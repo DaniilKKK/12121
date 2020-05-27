@@ -1,0 +1,6 @@
+﻿  BrickPile.cpp
+c:\users\yurin\source\repos\project_1\project_1\brickpile.cpp(108): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  PuckSupply.cpp
+  Создание кода...
+c:\users\yurin\source\repos\project_1\project_1\pucksupply.cpp(57): warning C4715: PuckSupply::getPuck: значение возвращается не при всех путях выполнения
+  PROJECT_1.vcxproj -> C:\Users\yurin\source\repos\PROJECT_1\x64\Debug\PROJECT_1.exe
