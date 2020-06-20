@@ -48,7 +48,7 @@ Puck PuckSupply::getPuck()
 {
 	if (_cnt > 0) {
 		cout << "Debug of HP: " << _cnt << endl;
-		return _Puck_arr[/*--*/_cnt];
+		return _Puck_arr[_cnt = _cnt - 1 ];
 	}
 
 	else {

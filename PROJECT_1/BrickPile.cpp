@@ -76,14 +76,26 @@ void BrickPile::brick_destroy(Puck shaiba)
 
 #include "BrickPile.h"
 #include <SFML/Graphics.hpp>
+#include "Brick.h"
+
 
 using namespace sf;
 
 BrickPile::BrickPile()
 {
 	_Brick_Pile = new Brick[_amount];
+	
+	Texture brick;
+	/*int n = 0;*/
+	for (int i = 1; i <= _bricks_x; i++) {
+		for (int j = 2; j <= _bricks_y + 1; j++) {
+			block[n].setTexture(_Brick_Pile[n].Brick_Pict);
+			block[n].setPosition(i * 63, j * 35);
+			n++;
+		}
+	}
 
-	RenderWindow app(VideoMode(535, 400), "_____________");
+	/*RenderWindow app(VideoMode(535, 400), "_____________");
 	app.setFramerateLimit(60);
 
 	Texture brick, BG, paddle, puck;
@@ -128,13 +140,15 @@ BrickPile::BrickPile()
 		}
 
 		app.display();
-	}
+	}*/
 }
 
 BrickPile::~BrickPile()
 {
 	delete[] _Brick_Pile;
 }
+
+
 
 void BrickPile::Destroy(Puck p) {
 	for (int i = 0; i < _amount; i++) {
